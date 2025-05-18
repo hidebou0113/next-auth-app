@@ -23,9 +23,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+    <html lang="ja">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-amber-300`}
+      >
+        <header className="mb-5 bg-blue-400 py-3 px-10 font-bold">
+          TASK APP
+        </header>
+        <main className="px-4 h-screen w-screen">{children}</main>
       </body>
     </html>
   );
